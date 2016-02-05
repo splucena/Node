@@ -1,0 +1,15 @@
+{
+  "name": "meadowlark_travel",
+  "version": "1.0.0",
+  "description": "Simple Website using Node and Express",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "console.log('Test');"
+  },
+  "author": "splucena",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express3-handlebars": "^0.5.2"
+  }
+}
