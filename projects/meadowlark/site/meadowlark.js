@@ -5,6 +5,7 @@ var fortunes = ["A","B","C","D"];
 
 var app = express();
 app.use(express.static(__dirname + '/public'));
+
 // set up handlebars view engine
 var handlebars = require('express3-handlebars').create({defaultLayout:'main'});
 app.engine('handlebars', handlebars.engine);
@@ -24,9 +25,17 @@ app.get('/',function(req,res){
 app.get('/about',function(req,res){
 	res.render('about', {
 		fortune:fortune.getFortune(),
-		pageTestScript: '/qa/tests-about.js'
+		pageTestScript: '/qa/test-about.js'
 	});
 
+});
+
+app.get('/tours/hood-river', function(req, res) {
+	res.render('tours/hood-river');
+});
+
+app.get('/tours/request-group-rate', function(req, res) {
+	res.render('tours/request-group-rate');
 });
 
 app.use(function(req,res){

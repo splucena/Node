@@ -5,7 +5,7 @@
 		{{#if showTests}}
 			<link rel="stylesheet" href="/vendor/mocha.css">
 		{{/if}}
-		<script type="text/javascript" src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</head>
 	<header><img src="img/openmrs.gif"></header>
 	<body>
@@ -19,7 +19,7 @@
 				mocha.ui('tdd')
 				var assert = chai.assert;
 			</script>
-			<script type="text/javascript" src="/qa/tests.global.js"></script>
+			<script type="text/javascript" src="/qa/global-tests.js"></script>
 			{{#if pageTestScript}}
 				<script type="text/javascript" src="{{pageTestScript}}"></script>
 			{{/if}}
