@@ -1,0 +1,31 @@
+<h1>Test Page</h1>
+
+<p>Test</p>
+
+<ul>
+	{{#each test.tours}}
+		{{! I'm in a new block...and the context has changed }}
+		<li>
+			{{name}} - {{price}}
+			{{#if ../test.currencies}}
+				({{../../test.currency.abbrev}})
+			{{/if}}
+		</li>
+	{{/each}}
+</ul>
+{{#unless test.currencies}}
+	<p>All prices in {{test.currency.name}}.</p>
+{{/unless}}
+{{#if test.specialsUrl}}
+	{{! I'm in a new block... but the context hasn't changed (sort of)}}
+	<p>Check out our <a href="{{test.specialsUrl}}">special</a></p>
+{{else}}
+	<p>Please check back often for specials.</p>
+{{/if}}
+<p>
+	{{#each test.currencies}}
+		<a href="#" class="currency">{{.}}</a>
+	{{else}}
+		Unfortunately, we currently only accept {{test.currency.name}}
+	{{/each}}
+</p>

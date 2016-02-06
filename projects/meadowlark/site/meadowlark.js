@@ -1,5 +1,6 @@
 var express = require('express');
 var fortune = require('./lib/fortune.js');
+var test = require('./lib/test.js');
 
 var fortunes = ["A","B","C","D"];
 
@@ -28,6 +29,12 @@ app.get('/about',function(req,res){
 		pageTestScript: '/qa/test-about.js'
 	});
 
+});
+
+app.get('/test', function(req,res) {
+	res.render('test', {
+		test: test.getTest()
+	});
 });
 
 app.get('/tours/hood-river', function(req, res) {

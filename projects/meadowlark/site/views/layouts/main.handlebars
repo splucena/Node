@@ -5,12 +5,20 @@
 		{{#if showTests}}
 			<link rel="stylesheet" href="/vendor/mocha.css">
 		{{/if}}
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	</head>
 	<header><img src="img/openmrs.gif"></header>
 	<body>
-		{{{body}}}
-
+		<div class="container">
+			{{{body}}}
+			<footer>&copy;2016 Meadowlark Travel</footer>	
 		{{#if showTests}}
 			<div id="mocha"></div>
 			<script type="text/javascript" src="/vendor/mocha.js"></script>
@@ -27,5 +35,6 @@
 				mocha.run();
 			</script>
 		{{/if}}
+		</div>
 	</body>
 </html>
